@@ -1,0 +1,373 @@
+:root {
+  --blue-color: #0500ff;
+  --blue10-color: #edeffb;
+  --black-color: #1c1c1c;
+  --gray20-color: #9e9e9e;
+  --gray10-color: #dfdfdf;
+  --gray05-color: #f5f5f5;
+  --gray00-color: #f0f0f0;
+  --white-color: #ffffff;
+}
+
+.container {
+  background-color: var(--gray05-color);
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  padding-left: 1rem;
+  width: 100%;
+  height: 60px;
+  background-color: var(--white-color);
+  box-shadow: 0px 0px 10px #9e9e9e;
+}
+
+.logo {
+  width: 4.5rem;
+}
+
+.searchSession {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+}
+
+.searchSession h1 {
+  font-size: 21px;
+  font-weight: 500;
+  color: var(--black-color);
+  padding-bottom: 1.5rem;
+}
+
+/* estilos input */
+
+.searchEmployee {
+  border: 1px solid var(--gray10-color);
+  border-radius: 8px;
+  width: 100%;
+  height: 47px;
+  padding-left: 16px;
+  padding-top: 1px;
+}
+
+.searchEmployee::placeholder {
+  color: var(--gray20-color);
+  font-size: 16px;
+}
+
+.searchContainer {
+  position: relative;
+}
+
+.imgSearch {
+  position: absolute;
+  right: 14px;
+  bottom: 10px;
+  width: 26px;
+  filter: invert(5%);
+}
+
+.noResults {
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* -------------- */
+
+.employeeSession {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.3rem;
+  padding-bottom: 8rem;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.employeeDescription {
+  display: flex;
+  justify-content: space-between;
+  height: 47px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: var(--blue-color);
+  align-items: center;
+  color: var(--white-color);
+}
+
+.divInfos h2 {
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.infoDesktop {
+  display: none;
+}
+
+.info {
+  display: flex;
+  padding-left: 1rem;
+  gap: 24px;
+}
+
+.infoJob {
+  display: none;
+}
+
+.point {
+  height: 8px;
+  width: 8px;
+  background-color: var(--white-color);
+  border-radius: 100%;
+  margin-right: 2rem;
+}
+
+/* informações dos funcionarios */
+
+.employeeContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-color);
+  min-height: 60px;
+  border-bottom: 1px solid var(--gray10-color);
+
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 13px;
+}
+
+.divInfoApi,
+.divInfos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.divInfos button {
+  margin-right: 5px;
+}
+
+.divName {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.divJob,
+.divContato {
+  display: none;
+}
+
+.divName h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.divName img {
+  width: 34px;
+  height: 34px;
+  border-radius: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.svgCharm {
+  width: 30px;
+  filter: invert(70%) sepia(100%) saturate(700%) hue-rotate(180deg)
+    brightness(80%) contrast(90%);
+}
+
+/* estilos janela que abre no mobile */
+
+.containerMobile {
+  padding-top: 18px;
+  padding-bottom: 30px;
+  padding-right: 5px;
+}
+
+.containerMobile h4 {
+  font-weight: 500;
+}
+
+.divCargo,
+.divDate,
+.divTel {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--gray10-color);
+  padding-top: 16px;
+}
+
+@media (min-width: 768px) {
+  /* estilos da primeira sessão */
+  header {
+    padding-left: 2rem;
+  }
+  .searchContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .searchEmployee {
+    width: 287px;
+  }
+
+  .searchSession {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .searchSession h1 {
+    padding: 0;
+  }
+
+  .imgSearch {
+    bottom: 18px;
+  }
+
+  /* estilos da segunda sessão */
+
+  .employeeSession {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .info {
+    gap: 2.3rem;
+    padding-left: 2.1rem;
+  }
+
+  .infoJob {
+    display: flex;
+    align-items: center;
+  }
+
+  .point {
+    display: none;
+  }
+
+  .infoDesktop {
+    display: flex;
+    /* padding-right: 6rem; */
+    gap: 2.2rem;
+  }
+
+  /* estilos dos dados da api */
+
+  .employeeContainer {
+    padding-left: 0;
+  }
+
+  .divInfoApi,
+  .divInfos {
+    display: grid;
+    /* grid-template-columns: 1fr 0.5fr 1fr; */
+    grid-template-columns: 0.6fr 0.3fr 1fr;
+  }
+
+  .divName {
+    padding-left: 2rem;
+    /* gap: 8rem; */
+    gap: 3rem;
+  }
+
+  .svgCharm {
+    display: none;
+  }
+  .divJob {
+    display: flex;
+    padding-left: 0.3rem;
+    /* padding-left: 1.9rem; */
+  }
+
+  .divContato {
+    display: flex;
+    /* padding-left: 2.3rem; */
+    /* gap: 8.5rem; */
+    padding-left: 0.6rem;
+    gap: 6.5rem;
+  }
+
+  .divJob h3 {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: end;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* estilos segunda session */
+  .divInfos h2 {
+    padding: 2rem;
+  }
+
+  .info {
+    padding-left: 0.5rem;
+    gap: 1.1rem;
+  }
+
+  .infoDesktop {
+    gap: 0;
+    padding-left: 4rem;
+  }
+
+  .infoJob {
+    padding-left: 3.1rem;
+  }
+
+  /* estilos dados da api */
+
+  .divName {
+    gap: 5.7rem;
+    padding-left: 2.5rem;
+  }
+
+  .divJob {
+    padding-left: 5rem;
+  }
+
+  .divContato {
+    padding-left: 7.3rem;
+    gap: 8.1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* estilos segunda session */
+
+  .info {
+    gap: 2rem;
+  }
+
+  .infoDesktop {
+    padding-left: 12rem;
+    gap: 2rem;
+  }
+
+  .infoJob {
+    padding-left: 5.2rem;
+  }
+
+  /* estilos dados da api */
+
+  .divName {
+    gap: 6.6rem;
+  }
+
+  .divJob {
+    padding-left: 7.6rem;
+  }
+
+  .divContato {
+    padding-left: 14.5rem;
+    gap: 10.3rem;
+  }
+}
