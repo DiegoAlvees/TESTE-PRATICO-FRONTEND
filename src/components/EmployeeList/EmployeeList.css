@@ -1,0 +1,127 @@
+.employeeSession {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.3rem;
+    padding-bottom: 8rem;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .employeeDescription {
+    display: flex;
+    justify-content: space-between;
+    height: 47px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--blue-color);
+    align-items: center;
+    color: var(--white-color);
+  }
+  
+  .divInfos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .divInfos h2 {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  
+  .infoDesktop {
+    display: none;
+  }
+  
+  .info {
+    display: flex;
+    padding-left: 1rem;
+    gap: 24px;
+  }
+  
+  .infoJob {
+    display: none;
+  }
+  
+  .point {
+    height: 8px;
+    width: 8px;
+    background-color: var(--white-color);
+    border-radius: 100%;
+    margin-right: 2rem;
+  }
+
+  .noResults {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .employeeSession {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    
+      .info {
+        gap: 2.3rem;
+        padding-left: 2.1rem;
+      }
+    
+      .infoJob {
+        display: flex;
+        align-items: center;
+      }
+    
+      .point {
+        display: none;
+      }
+    
+      .infoDesktop {
+        display: flex;
+        gap: 2.2rem;
+      }
+
+      .divInfos {
+        display: grid;
+        grid-template-columns: 0.6fr 0.3fr 1fr;
+      }
+
+  }
+
+  @media (min-width: 1024px) {
+    .divInfos h2 {
+      padding: 2rem;
+    }
+  
+    .info {
+      padding-left: 0.5rem;
+      gap: 1.1rem;
+    }
+  
+    .infoDesktop {
+      gap: 0;
+      padding-left: 4rem;
+    }
+  
+    .infoJob {
+      padding-left: 3.1rem;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    .info {
+      gap: 2rem;
+    }
+  
+    .infoDesktop {
+      padding-left: 12rem;
+      gap: 2rem;
+    }
+  
+    .infoJob {
+      padding-left: 5.2rem;
+    }
+}
