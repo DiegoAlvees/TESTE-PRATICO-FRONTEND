@@ -1,8 +1,8 @@
-/* eslint-disable react/prop-types */
-import charmUp from '../../assets/up.svg';
-import charmDown from '../../assets/down.svg';
-import { formatDate, phoneFormat } from '../../utils';
-import './EmployeeCard.css'
+import charmUp from "../../assets/up.svg";
+import charmDown from "../../assets/down.svg";
+import { formatDate, phoneFormat } from "../../utils";
+import "./EmployeeCard.css";
+import PropTypes from "prop-types";
 
 const EmployeeCard = ({ employee, tableInfo, openInfo }) => {
   return (
@@ -46,6 +46,19 @@ const EmployeeCard = ({ employee, tableInfo, openInfo }) => {
       )}
     </div>
   );
+};
+
+EmployeeCard.propTypes = {
+  employee: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    job: PropTypes.string.isRequired,
+    admission_date: PropTypes.string.isRequired,
+    phone: PropTypes.string.isRequired,
+  }).isRequired,
+  tableInfo: PropTypes.string.isRequired,
+  openInfo: PropTypes.func.isRequired,
 };
 
 export default EmployeeCard;

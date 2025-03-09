@@ -1,6 +1,6 @@
-/* eslint-disable react/prop-types */
-import search from '../../assets/search.svg';
-import './SearchSection.css'
+import search from "../../assets/search.svg";
+import "./SearchSection.css";
+import PropTypes from "prop-types";
 
 const SearchSection = ({ pesquisa, setPesquisa }) => {
   return (
@@ -20,6 +20,11 @@ const SearchSection = ({ pesquisa, setPesquisa }) => {
       </div>
     </section>
   );
+};
+
+SearchSection.propTypes = {
+  pesquisa: PropTypes.string.isRequired,
+  setPesquisa: PropTypes.func.isRequired,
 };
 
 export default SearchSection;

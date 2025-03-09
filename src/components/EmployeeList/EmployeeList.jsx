@@ -1,7 +1,7 @@
-/* eslint-disable react/prop-types */
-import { useState } from 'react';
-import EmployeeCard from '../EmployeeCard/EmployeeCard';
-import './EmployeeList.css'
+import { useState } from "react";
+import EmployeeCard from "../EmployeeCard/EmployeeCard";
+import "./EmployeeList.css";
+import PropTypes from "prop-types";
 
 const EmployeeList = ({ data, pesquisa }) => {
   const [tableInfo, setTableInfo] = useState(null);
@@ -49,6 +49,20 @@ const EmployeeList = ({ data, pesquisa }) => {
       )}
     </section>
   );
+};
+
+EmployeeList.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      job: PropTypes.string.isRequired,
+      admission_date: PropTypes.string.isRequired,
+      phone: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  pesquisa: PropTypes.string.isRequired,
 };
 
 export default EmployeeList;
